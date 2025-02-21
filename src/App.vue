@@ -55,7 +55,7 @@ export default {
       inputData: '',
       responseData: null,
       error: '',
-      selectedFields: [] // Array to store selected dropdown options
+      selectedFields: [] 
     };
   },
   methods: {
@@ -75,7 +75,7 @@ export default {
           return;
         }
         
-        const response = await axios.post('https://cors-anywhere.herokuapp.com/https://bajaj-backend-woad.vercel.app/bfhl', parsedData);
+        const response = await axios.post('https://bajaj-backend-woad.vercel.app/bfhl', parsedData);
         this.responseData = response.data;
       } catch (err) {
         this.error = err instanceof SyntaxError 
